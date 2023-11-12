@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtUser,edtPass;
+    EditText edtUser, edtPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         asyncTask.execute();*/
     }
 
-    protected void onClickDataLog(View view){
-        Intent intent = new Intent (this, selector.class);
+    protected void onClickDataLog(View view) {
+        Intent intent = new Intent(this, selector.class);
         startActivity(intent);
     }
 
@@ -67,3 +67,5 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Credenciales incorrectas", Toast.LENGTH_LONG).show();
         }
     }*/
+
+}
