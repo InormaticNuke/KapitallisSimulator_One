@@ -38,6 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <EditText
+            android:id="@+id/usertext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo Electronico"
@@ -45,7 +46,7 @@
             android:minHeight="48dp"/>
 
         <EditText
-            android:id="@+id/usertext"
+            android:id="@+id/passtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
@@ -53,7 +54,7 @@
             android:minHeight="48dp"/>
 
         <Button
-            android:id="@+id/passtext"
+            android:id="@+id/logbutton"
             android:onClick="onClickDataLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

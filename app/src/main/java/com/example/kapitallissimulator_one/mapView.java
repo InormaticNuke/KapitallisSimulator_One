@@ -1,6 +1,8 @@
 package com.example.kapitallissimulator_one;
 
-public class mapView {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class mapView extends AppCompatActivity {
 
     private static final double EARTH_RADIUS = 6371;
 
@@ -9,8 +11,6 @@ public class mapView {
     /*public static double mapView(GeoPoint point1, GeoPoint point2) {
         double lat1 = Math.toRadians(point1.getLatitude());
         double lon1 = Math.toRadians(point1.getLongitude());
-        double lat2 = Math.toRadians(point2.getLatitude());
-        double lon2 = Math.toRadians(point2.getLongitude());
 
         double dLat = lat2 - lat1;
         double dLon = lon2 - lon1;

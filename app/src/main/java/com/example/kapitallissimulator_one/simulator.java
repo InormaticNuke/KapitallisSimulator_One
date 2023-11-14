@@ -1,11 +1,19 @@
 package com.example.kapitallissimulator_one;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class simulator extends AppCompatActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.dataentry);
+
+    }
+
     protected void onClickDataShow(View view) {
         Intent intent = new Intent(this, selector.class);
         startActivity(intent);
