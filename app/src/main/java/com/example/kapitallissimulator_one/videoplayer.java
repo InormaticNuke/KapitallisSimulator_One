@@ -1,8 +1,10 @@
 package com.example.kapitallissimulator_one;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.MediaController;
@@ -40,5 +42,10 @@ public class videoplayer extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void onClickBackTwo(View view){
+        Intent intent = new Intent (this, selector.class);
+        startActivity(intent);
     }
 }

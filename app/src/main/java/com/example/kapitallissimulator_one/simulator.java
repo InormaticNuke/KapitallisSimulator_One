@@ -14,13 +14,14 @@ public class simulator extends AppCompatActivity {
 
     }
 
-    protected void onClickDataShow(View view) {
-        Intent intent = new Intent(this, selector.class);
+    public void onClickDataShow(View view) {
+        Intent intent = new Intent(this, simresult.class);
         startActivity(intent);
     }
 
-    protected void onClickSelectorTwo(View view) {
-        Intent intent = new Intent(this, selector.class);
+
+    public void onClickBackOne(View view){
+        Intent intent = new Intent (this, selector.class);
         startActivity(intent);
     }
 

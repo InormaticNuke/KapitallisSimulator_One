@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         asyncTask.execute();*/
     }
 
-    protected void onClickDataLog(View view) {
+    public void onClickDataLog(View view) {
         Intent intent = new Intent(this, selector.class);
         startActivity(intent);
     }

@@ -42,34 +42,34 @@
             android:hint="FECHA DE VENCIMIENTO"
             android:minHeight="48dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="#F1C40F"
+            android:gravity="center"
+            android:onClick="onClickDataShow"
+            android:text="SIMULAR"
+            android:textColor="#fff"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="589dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="#F1C40F"
+            android:gravity="center"
+            android:onClick="onClickBackOne"
+            android:text="ATRAS"
+            android:textColor="#fff"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-7dp"
+            tools:layout_editor_absoluteY="648dp" />
+
     </LinearLayout>
 
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:backgroundTint="#F1C40F"
-        android:gravity="center"
-        android:onClick="onClickDataShow"
-        android:text="SIMULAR"
-        android:textColor="#fff"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="589dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:backgroundTint="#F1C40F"
-        android:gravity="center"
-        android:onClick="onClickSelectorTwo"
-        android:text="ATRAS"
-        android:textColor="#fff"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="648dp" />
 
     <ImageView
         android:id="@+id/imageView"
