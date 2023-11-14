@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//Funcion Async, Intento de pantalla de carga WORK IN PROGRESS
+//Funcion Async, Intento de pantalla de carga WORK IN PROGRESS.
 
     /*public class MyAsyncTask extends AsyncTask<Void, Void, String> {
 
