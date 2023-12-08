@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="666dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario de registro bancario"
+            android:textSize="22dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/userID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="RUT"
+            android:minHeight="48dp"
+            />
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:minHeight="48dp"
+            />
+
+        <Spinner
+            android:id="@+id/userAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:contentDescription="Comuna"
+
+            />
+
+
+        <Button
+            android:onClick="sendDataFirestore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEND DATA"
+            />
+
+        <Button
+            android:onClick="viewList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW LIST"
+            />
+
+        <ListView
+            android:id="@+id/listShow"
+            android:layout_width="match_parent"
+            android:layout_height="199dp"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
