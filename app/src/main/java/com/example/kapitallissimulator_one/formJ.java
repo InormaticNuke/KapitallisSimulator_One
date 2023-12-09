@@ -22,7 +22,7 @@ public class formJ extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.factoringdata);
+        setContentView(R.layout.form);
 
         LoadListFirestore();
         db = FirebaseFirestore.getInstance();
