@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "830095438402",
+    "project_id": "kapitallissimulatorone",
+    "storage_bucket": "kapitallissimulatorone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830095438402:android:54515a318bdf72b252b3db",
+        "android_client_info": {
+          "package_name": "com.example.kapitallissimulator_one"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjW7yOwvaGdWWQU11_HZQjkOyke9T9abY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

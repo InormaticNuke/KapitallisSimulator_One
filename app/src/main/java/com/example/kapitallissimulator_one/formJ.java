@@ -1,5 +1,6 @@
 package com.example.kapitallissimulator_one;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -67,7 +68,7 @@ public class formJ extends AppCompatActivity {
         mascota.put("Nombre", Name);
         mascota.put("Comuna", adressComuna);
 
-        //Enviamos los datos a firestore
+
         db.collection("mascotas")
                 .document(ID)
                 .set(mascota)
@@ -111,6 +112,11 @@ public class formJ extends AppCompatActivity {
     }
 
     public void listShow(){
+    }
+
+    public void backButtonForm(View view) {
+        Intent intent = new Intent(this, selector.class);
+        startActivity(intent);
     }
 
 }

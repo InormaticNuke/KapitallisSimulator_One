@@ -39,5 +39,10 @@ public class selector extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickRegister(View view){
+        Intent intent = new Intent (this, formJ.class);
+        startActivity(intent);
+    }
+
 
 }
