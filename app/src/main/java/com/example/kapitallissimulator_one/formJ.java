@@ -38,7 +38,7 @@ public class formJ extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form);
 
-        LoadListFirestore();
+        viewListFirestore();
         db = FirebaseFirestore.getInstance();
 
         txtID = findViewById(R.id.userID);
@@ -56,22 +56,22 @@ public class formJ extends AppCompatActivity {
 
     }
 
-    public void LoadDataFirestore(View view) {
+    public void sendDataFirestore(View view) {
 
         String ID = txtID.getText().toString();
         String Name = txtName.getText().toString();
 
         String adressComuna = spComuna.getSelectedItem().toString();
 
-        Map<String, Object> mascota = new HashMap<>();
-        mascota.put("Rut", ID);
-        mascota.put("Nombre", Name);
-        mascota.put("Comuna", adressComuna);
+        Map<String, Object> cliente = new HashMap<>();
+        cliente.put("Rut", ID);
+        cliente.put("Nombre", Name);
+        cliente.put("Comuna", adressComuna);
 
 
         db.collection("mascotas")
                 .document(ID)
-                .set(mascota)
+                .set(cliente)
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(formJ.this, "Datos enviados a Firestore correctamente", Toast.LENGTH_SHORT).show();
                 })
@@ -80,7 +80,7 @@ public class formJ extends AppCompatActivity {
                 });
     }
 
-    public void LoadListFirestore(){
+    public void viewListFirestore(){
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -111,8 +111,6 @@ public class formJ extends AppCompatActivity {
                 });
     }
 
-    public void listShow(){
-    }
 
     public void backButtonForm(View view) {
         Intent intent = new Intent(this, selector.class);
