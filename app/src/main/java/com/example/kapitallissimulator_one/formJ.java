@@ -1,15 +1,24 @@
 package com.example.kapitallissimulator_one;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class formJ extends AppCompatActivity {
 
@@ -54,8 +63,33 @@ public class formJ extends AppCompatActivity {
 
     public void LoadListFirestore(){
 
-        LoadListFirestore();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        db.collection("Comunas")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            List<String> listaComunas = new ArrayList<>();
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                String linea = "||" + document.getString("Rut") + "||" +
+                                        document.getString("Nombre") + "||";
+
+                                listaComunas.add(linea);
+                            }
+
+                            ArrayAdapter<String> adaptador = new ArrayAdapter<>(formJ.this,
+                                    android.R.layout.simple_list_item_1, listaComunas);
+                            list.setAdapter(adaptador);
+                        } else {
+
+                            Log.e("TAG", "Error al obtener datos de Firestore", task.getException());
+                        }
+                    }
+                });
     }
 
     public void listShow(){
