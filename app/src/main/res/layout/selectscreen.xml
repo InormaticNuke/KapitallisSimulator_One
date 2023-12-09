@@ -94,6 +94,19 @@
             tools:layout_editor_absoluteX="-10dp"
             tools:layout_editor_absoluteY="546dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="#F1C40F"
+            android:gravity="center"
+            android:onClick="onClickRegister2"
+            android:text="Registro MQTT"
+            android:textColor="#fff"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-10dp"
+            tools:layout_editor_absoluteY="546dp" />
+
 
     </LinearLayout>
 
