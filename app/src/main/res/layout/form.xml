@@ -54,12 +54,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SEND DATA"
+            android:backgroundTint="#F1C40F"
             />
 
         <Button
             android:onClick="viewListFirestore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F1C40F"
             android:text="VIEW LIST"
             />
 
@@ -75,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BACK"
+            android:backgroundTint="#F1C40F"
             />
 
 
