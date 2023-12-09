@@ -1,6 +1,7 @@
 package com.example.kapitallissimulator_one;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,12 +43,18 @@ public class formJ extends AppCompatActivity {
 
     }
 
+    public void sendDataFirestore(View view) {
+
+        String RUT = txtID.getText().toString();
+        String Nombre = txtName.getText().toString();
+        String Comuna = spComuna.getSelectedItem().toString();
+
+
+    }
+
     public void LoadListFirestore(){
-        String ID = txtID.getText().toString();
-        String Name = txtName.getText().toString();
 
-        String Type = spComuna.getSelectedItem().toString();
-
+        LoadListFirestore();
 
     }
 
