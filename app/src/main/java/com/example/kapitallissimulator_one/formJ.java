@@ -33,8 +33,9 @@ public class formJ extends AppCompatActivity {
         spComuna = findViewById(R.id.userAdress);
         list = findViewById(R.id.listShow);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,
-                spComuna);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, adressComuna);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spComuna.setAdapter(adapter);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spComuna.setAdapter(adapter);
