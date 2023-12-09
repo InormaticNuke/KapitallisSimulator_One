@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,9 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class formJ extends AppCompatActivity {
 
@@ -52,13 +55,28 @@ public class formJ extends AppCompatActivity {
 
     }
 
-    public void sendDataFirestore(View view) {
+    public void LoadDataFirestore(View view) {
 
-        String RUT = txtID.getText().toString();
-        String Nombre = txtName.getText().toString();
-        String Comuna = spComuna.getSelectedItem().toString();
+        String ID = txtID.getText().toString();
+        String Name = txtName.getText().toString();
 
+        String adressComuna = spComuna.getSelectedItem().toString();
 
+        Map<String, Object> mascota = new HashMap<>();
+        mascota.put("Rut", ID);
+        mascota.put("Nombre", Name);
+        mascota.put("Comuna", adressComuna);
+
+        //Enviamos los datos a firestore
+        db.collection("mascotas")
+                .document(ID)
+                .set(mascota)
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(formJ.this, "Datos enviados a Firestore correctamente", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(formJ.this, "Error al enviar datos a Firestore: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
     }
 
     public void LoadListFirestore(){
