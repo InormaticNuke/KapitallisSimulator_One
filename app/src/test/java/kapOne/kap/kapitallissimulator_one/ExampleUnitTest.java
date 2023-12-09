@@ -1,4 +1,4 @@
-package com.example.kapitallissimulator_one;
+package kapOne.kap.kapitallissimulator_one;
 
 import org.junit.Test;
 

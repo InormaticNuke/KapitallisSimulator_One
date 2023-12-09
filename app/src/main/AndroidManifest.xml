@@ -13,7 +13,7 @@
         android:theme="@style/Theme.KapitallisSimulator_One"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="kapOne.kap.kapitallissimulator_one.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,37 +22,37 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".selector">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.selector">
 
 
         </activity>
 
-        <activity android:name=".simulator">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.simulator">
 
         </activity>
 
-        <activity android:name=".simresult">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.simresult">
 
         </activity>
 
-        <activity android:name=".videoplayer">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.videoplayer">
 
 
         </activity>
 
-        <activity android:name=".mapView">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.mapView">
 
         </activity>
 
-        <activity android:name=".factoringdata">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.factoringdata">
 
         </activity>
 
-        <activity android:name=".formJ">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.formJ">
 
         </activity>
 
-        <activity android:name=".formJ2">
+        <activity android:name="kapOne.kap.kapitallissimulator_one.formJ2">
 
         </activity>
 

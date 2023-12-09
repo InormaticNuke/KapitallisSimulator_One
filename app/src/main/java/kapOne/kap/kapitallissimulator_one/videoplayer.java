@@ -1,4 +1,4 @@
-package com.example.kapitallissimulator_one;
+package kapOne.kap.kapitallissimulator_one;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -11,6 +11,8 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.kapitallissimulator_one.R;
 
 public class videoplayer extends AppCompatActivity {
 

@@ -1,11 +1,12 @@
-package com.example.kapitallissimulator_one;
+package kapOne.kap.kapitallissimulator_one;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+
+import com.example.kapitallissimulator_one.R;
 
 public class MainActivity extends AppCompatActivity {
 
